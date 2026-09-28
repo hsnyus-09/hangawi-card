@@ -1,0 +1,286 @@
+:root {
+  color: #2f2926;
+  background: #fff4ea;
+  font-family: "Apple SD Gothic Neo", "Noto Sans CJK KR", "Malgun Gothic", system-ui, sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(120deg, rgba(232, 93, 79, 0.12), transparent 38%),
+    linear-gradient(320deg, rgba(255, 209, 102, 0.18), transparent 44%),
+    #fff4ea;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  min-height: 44px;
+  border: 1px solid #2f2926;
+  background: #2f2926;
+  color: #fffaf3;
+  border-radius: 8px;
+  padding: 0.72rem 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+a:focus-visible {
+  outline: 3px solid #ffd166;
+  outline-offset: 3px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: clamp(1.4rem, 4vw, 4rem) clamp(1rem, 5vw, 5rem) 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: #b83227;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 0;
+  max-width: 12ch;
+  font-family: "Apple SD Gothic Neo", "Noto Serif CJK KR", serif;
+  font-size: clamp(2.2rem, 5.2vw, 5.6rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+  word-break: keep-all;
+}
+
+.lede {
+  max-width: 42rem;
+  color: #76645d;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  word-break: keep-all;
+}
+
+.skip-link {
+  color: #2f2926;
+  font-weight: 800;
+}
+
+.studio-shell {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 430px);
+  gap: clamp(1rem, 3vw, 2.2rem);
+  padding: 1rem clamp(1rem, 5vw, 5rem) 3rem;
+}
+
+.preview-pane,
+.editor-pane {
+  min-width: 0;
+}
+
+.card-preview {
+  width: min(100%, 740px);
+  margin: 0 auto;
+  aspect-ratio: 12 / 17;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 24px 38px rgba(47, 41, 38, 0.18));
+}
+
+.card-preview svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.preview-error {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #b83227;
+  color: #b83227;
+  background: #fffaf3;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.25rem 0 0;
+}
+
+.actions button:last-child {
+  background: #b83227;
+  border-color: #b83227;
+}
+
+.status {
+  min-height: 1.5em;
+  text-align: center;
+  color: #2f6b52;
+  font-weight: 750;
+}
+
+.status[data-tone="error"] {
+  color: #b83227;
+}
+
+.editor-pane {
+  align-self: start;
+  display: grid;
+  gap: 0.85rem;
+  background: rgba(255, 250, 243, 0.88);
+  border: 1px solid rgba(47, 41, 38, 0.18);
+  border-radius: 8px;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+label,
+legend,
+summary {
+  font-weight: 850;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid rgba(47, 41, 38, 0.28);
+  border-radius: 8px;
+  padding: 0.8rem 0.9rem;
+  background: #fffdf8;
+  color: #2f2926;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 8.5rem;
+  line-height: 1.55;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0.2rem 0 0;
+}
+
+.segmented,
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.45rem;
+}
+
+.template-choice {
+  background: #fffaf3;
+  color: #2f2926;
+}
+
+.template-choice[aria-pressed="true"] {
+  background: #2f2926;
+  color: #fffaf3;
+}
+
+.swatch {
+  display: inline-flex;
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 76px;
+  border: 3px solid transparent;
+  background: #fffaf3;
+}
+
+.swatch[aria-pressed="true"] {
+  border-color: #2f2926;
+}
+
+.swatch span {
+  display: block;
+  flex: 1;
+  height: 42px;
+  background: var(--swatch);
+}
+
+details {
+  border-top: 1px solid rgba(47, 41, 38, 0.16);
+  padding-top: 0.8rem;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #2f2926;
+  color: #fff4ea;
+}
+
+.fine-print,
+footer {
+  color: #76645d;
+  font-size: 0.92rem;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 5vw 2rem;
+}
+
+@media (max-width: 840px) {
+  .site-header {
+    display: block;
+  }
+
+  .studio-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .skip-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .studio-shell {
+    padding-inline: 0.8rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
