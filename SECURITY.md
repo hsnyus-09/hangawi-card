@@ -1,11 +1,11 @@
 # Security Policy
 
-## 취약점 보고
+## Reporting Vulnerabilities
 
-재현 방법과 영향 범위를 정리해 관리자에게 비공개로 알려 주세요. 비공개 연락 경로가 없으면 공개 이슈에는 영향 범위와 연락 방법만 남겨 주세요. 악용 가능한 입력이나 공격 코드는 공개하지 마세요.
+Privately notify the maintainers with the reproduction steps and impact scope. If no private contact channel is available, leave only the impact scope and contact method in a public issue. Do not disclose exploitable input or attack code publicly.
 
-## 카드 렌더링
+## Card Rendering
 
-사용자 텍스트는 SVG에 넣기 전에 길이 검사, XML 문자 정리, XML 이스케이프 처리를 거칩니다. 사용자 지정 테마는 `#rrggbb` 색상만 허용합니다. 새 템플릿이나 CLI 옵션을 추가할 때도 기존 문자열 처리 함수를 거쳐야 합니다.
+Before user text is inserted into SVG, it goes through length checks, XML character cleanup, and XML escaping. Custom themes allow only `#rrggbb` colors. New templates and CLI options must also pass through the existing string-processing functions.
 
-PNG는 `@resvg/resvg-js`로 렌더링합니다. 폰트 파일은 신뢰할 수 있는 출처의 파일을 사용하세요.
+PNG files are rendered with `@resvg/resvg-js`. Use font files from trusted sources.
